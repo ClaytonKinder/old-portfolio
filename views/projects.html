@@ -1,0 +1,295 @@
+<div class="animationCover"></div>
+<div class="viewWrapper">
+  <div class="pageWrapper" ng-controller="MainController">
+  <div class="projectsBlock">
+    <h1>Click on a project for more information</h1>
+    <div class="projectBlock beacon" ng-click="selectProject($event)">
+      <h1 class="beacon">Beacon</h1>
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Beacon<span>(September 2017 - present)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="https://ck-beacon-frontend.herokuapp.com/" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/beacon-frontend" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            My largest project yet, I built Beacon as a web application designed around connecting people with those around them. I used many technologies that were unfamiliar to me at the time but proved to be a great boon in development. I built out both the frontend and backend of this website, choosing to create a separate API to handle all server needs.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="https://nodejs.org/en/" target="_blank">
+            Node.js
+          </a>
+          <a class="projectBlockTechnology" href="https://expressjs.com/" target="_blank">
+            Express.js
+          </a>
+          <a class="projectBlockTechnology" href="https://vuejs.org/" target="_blank">
+            Vue.js
+          </a>
+          <a class="projectBlockTechnology" href="http://quasar-framework.org/" target="_blank">
+            Quasar
+          </a>
+          <a class="projectBlockTechnology" href="http://stylus-lang.com/" target="_blank">
+            Stylus
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="projectBlock village" ng-click="selectProject($event)">
+      <h1 class="village">The Village at Coosaw</h1>
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Village at Coosaw<span>(August 2017 - present)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="http://www.villageatcoosaw.com" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/village-at-coosaw" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            A Wordpress site that I built for a nearby shopping center. I handled all aspects of development and provided a website that completely met the needs of the client while remaining simple enough for anyone to update in the Wordpress backend.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="https://wordpress.com/" target="_blank">
+            Wordpress
+          </a>
+          <a class="projectBlockTechnology" href="http://www.php.net/" target="_blank">
+            PHP
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+            CSS3
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="projectBlock gdg" ng-click="selectProject($event)">
+      <img class="gdg" src="media/gdg.png" alt="Elefgee">
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Good Done Great<span>(May 2016 - July 2017)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="https://www.gooddonegreat.com" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            During my time at Good Done Great, I was tasked with completely redeveloping the pre-login portion of our web application.
+            It was absolutely paramount to keep the design clean while still making sure that our mission was clearly communicated to all users and I am very proud of the result. Looking past the pre-login section, I also helped develop a social media feed and a multitude of pages, forms, modals, and charts.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+          <a class="projectBlockTechnology" href="https://angularjs.org/" target="_blank">
+            AngularJS
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="projectBlock design-lab" ng-click="selectProject($event)">
+      <h1 unselectable="on" class="design-lab">
+        DESIGN LAB
+      </h1>
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Design Lab<span>(March 2016)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="http://claytonkinder.github.io/challenge" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/challenge" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            A recent website that I built from a Photoshop mockup. Utilizes clean design for an optimal viewing experience.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projectBlock elefgee" toggle-project-info ng-click="selectProject($event)">
+      <img class="elefgee" src="media/elefgee.png" alt="Elefgee">
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Elefgee <span>(Aug 2015)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="https://github.com/Elefgee/elefgee" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            Elefgee is a web application designed by a colleague and I that serves as a way for gamers to find people to play games with. This project was my first venture into NodeJS and was a great exercise in back-end development, APIs, and managing user accounts and data. Although the site is no longer live, this marked my first full-stack application.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="https://nodejs.org/" target="_blank">
+            NodeJS
+          </a>
+          <a class="projectBlockTechnology" href="https://angularjs.org/" target="_blank">
+            AngularJS
+          </a>
+          <a class="projectBlockTechnology" href="http://www.jquery.com" target="_blank">
+            jQuery
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+            JavaScript
+          </a>
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projectBlock kraftee" ng-click="selectProject($event)">
+      <h1 unselectable="on" class="kraftee">Kraftee</h1>
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Kraftee <span>(Jul 2015)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="https://claytonkinder.github.io/Kraftee/#/" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/Kraftee" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            Kraftee was my first project that used AngularJS. The idea was to expand my knowledge of MVC systems by creating a fake digital storefront using the Etsy API.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="https://angularjs.org/" target="_blank">
+            AngularJS
+          </a>
+          <a class="projectBlockTechnology" href="http://www.asp.net/web-api" target="_blank">
+            API
+          </a>
+          <a class="projectBlockTechnology" href="http://www.jquery.com" target="_blank">
+            jQuery
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+            JavaScript
+          </a>
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projectBlock briefcases" ng-click="selectProject($event)">
+      <h1 unselectable="on" class="briefcases">
+        Briefcases<br>&<br>Bureaucrats
+      </h1>
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Briefcases & Bureaucrats<span>(Jun 2015)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="http://claytonkinder.github.io/Briefcases-Bureaucrats/" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/Briefcases-Bureaucrats" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            Through the power of JavaScript and jQuery, I have created what I believe to be the world's first business-themed fighting game. This was created as an exercise in constructors, arrays, and functions. Watch out for Franklin from management!
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="http://www.jquery.com" target="_blank">
+            jQuery
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+            JavaScript
+          </a>
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projectBlock peralta" ng-click="selectProject($event)">
+      <img class="peralta" src="media/peralta.png" alt="Peralta">
+      <div class="projectBlockInfo">
+        <div class="projectBlockTitle">
+          <h2>Peralta<span>(May 2015)</span></h2>
+          <div class="projectBlockLinks">
+            <a href="http://claytonkinder.github.io/Peralta" target="_blank">
+              <i class="fa fa-link"></i>
+            </a>
+            <a href="https://github.com/ClaytonKinder/Peralta" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="projectBlockDescription">
+          <p>
+            For one of my first projects, I recreated the Peralta website. In order to do this, I made use of all the wonderful abilities that SASS adds to vanilla CSS. This project taught me positioning, styling, and proper HTML layouts.
+          </p>
+        </div>
+        <div class="projectBlockTechnologies">
+          <a class="projectBlockTechnology" href="http://sass-lang.com/" target="_blank">
+            SASS
+          </a>
+          <a class="projectBlockTechnology" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+            HTML5
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-include src="'views/footer.html'"></ng-include>
+  </div>
+</div>

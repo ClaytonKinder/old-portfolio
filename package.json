@@ -1,0 +1,40 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio.",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "devicon": "^2.0.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^19.0.0",
+    "jquery": "^2.1.4",
+    "nodemailer": "^1.4.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "normalize-css": "^2.3.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaytonKinder/claytonkinder.github.io.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Clayton Kinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaytonKinder/claytonkinder.github.io/issues"
+  },
+  "homepage": "https://github.com/ClaytonKinder/claytonkinder.github.io#readme"
+}

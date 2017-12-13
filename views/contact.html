@@ -1,0 +1,76 @@
+<div class="viewWrapper">
+  <div class="pageWrapper">
+    <div class="contact">
+      <div class="contactInfo">
+        <div class="contactDetails">
+          <a href="tel:8433427727">(843) 324-7727</a>
+          <a href="email:ClaytonAlanKinder@gmail.com">ClaytonAlanKinder@gmail.com</a>
+        </div>
+        <div class="contactSocial">
+          <a href="http://www.github.com/ClaytonKinder" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/pub/clayton-kinder/103/509/10a" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="contactFormBlock">
+        <form name="contactForm" ng-submit="sendMail(name, address, message)" novalidate>
+          <div class="formInfo">
+            I am always open to new ideas. Please feel free to contact me through any of the ways provided to discuss projects, ideas, technology, or hilarious jokes.
+          </div>
+          <div class="formInputs">
+            <div class="formName">
+              <input type="text" name="contactName" id="contactName" ng-model="name" ng-change="updateEmail(name, address, message)" required>
+              <label for="contactName">Name</label>
+              <div class="formAlert" ng-show="contactForm.contactName.$invalid && !contactForm.contactName.$pristine">
+                <i class="fa fa-times-circle"></i>
+              </div>
+              <div class="formAlert" ng-show="contactForm.contactName.$valid && !contactForm.contactName.$pristine">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="formEmail">
+              <input type="email" name="contactEmail" id="contactEmail" ng-model="address" required>
+              <label for="contactEmail">Email</label>
+              <div class="formAlert" ng-show="contactForm.contactEmail.$invalid && !contactForm.contactEmail.$pristine">
+                <i class="fa fa-times-circle"></i>
+              </div>
+              <div class="formAlert" ng-show="contactForm.contactEmail.$valid && !contactForm.contactEmail.$pristine">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formTextarea">
+            <div class="formMessage">
+              <textarea name="contactMessage" id="contactMessage" ng-model="message" ng-change="updateEmail(name, address, message)" required></textarea>
+              <label for="contactMessage">Message</label>
+              <div class="formAlert" ng-show="contactForm.contactMessage.$invalid && !contactForm.contactMessage.$pristine">
+                <i class="fa fa-times-circle"></i>
+              </div>
+              <div class="formAlert" ng-show="contactForm.contactMessage.$valid && !contactForm.contactMessage.$pristine">
+                <i class="fa fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formSubmit">
+            <button type="submit" ng-class="{disabled: contactForm.$invalid}" ng-disabled="contactForm.$invalid">
+              <span class="buttonDefault">SEND</span>
+              <div class="loader"><span class="loader-inner"></span></div>
+              <i class="fa fa-check"></i>
+              <i class="fa fa-times"></i>
+            </button>
+            <div class="formSubmitMessage">
+              {{ submitMessage }}
+            </div>
+            <div class="formSubmitMessage">
+              {{ submitMessage2 }}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  <ng-include src="'views/footer.html'"></ng-include>
+  </div>
+</div>

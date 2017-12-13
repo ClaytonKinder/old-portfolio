@@ -1,0 +1,239 @@
+/**************************
+PROJECTS
+**************************/
+
+.projectsBlock {
+  @include flexbox(column, center, center);
+
+  > h1 {
+    text-align: center;
+    color: $c1;
+    font-weight: lighter;
+    margin-bottom: 50px;
+  }
+
+  .projectBlock {
+    width: 100%;
+    height: 425px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative;
+    cursor: pointer;
+    @include flexbox(row, center, center);
+
+    &:nth-child(odd) {
+      .projectBlockInfo {
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+      }
+    }
+
+    &:nth-child(even) {
+      .projectBlockInfo {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+      }
+    }
+
+    &.activeProject {
+      h1,
+      img {
+        opacity: 0;
+      }
+    }
+
+    &.activeProject .projectBlockInfo {
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+
+    &.beacon {
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+      ), url('../media/lighthouse.jpg');
+      background-position: 50% 42.5%;
+    }
+
+    &.village {
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+      ), url('../media/village.jpg');
+    }
+
+    &.briefcases {
+      background-color: $briefcasesBg;
+    }
+
+    &.kraftee {
+      background-color: $krafteeBg;
+    }
+
+    &.elefgee {
+      background-image: url('../media/triangles.png');
+    }
+
+    &.peralta {
+      background-image: url('../media/peraltaBg.png');
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    &.design-lab {
+      background-image: url('../media/design-labBg.png');
+      background-size: cover;
+      background-position: 75% 50%;
+    }
+
+    &.gdg {
+      background-color: #3a8fc3;
+    }
+
+    h1,
+    img {
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      text-align: center;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      @include transition;
+
+      &.beacon,
+      &.village {
+        color: white;
+        font-weight: lighter;
+        font-size: 3rem;
+      }
+
+      &.beacon {
+        letter-spacing: 0.25rem;
+      }
+
+      &.village {
+        font-family: 'Dancing Script', cursive;
+      }
+
+      &.briefcases {
+        font-family: 'PressStart2P';
+        font-size: 2.5rem;
+      }
+
+      &.kraftee {
+        font-family: $krafteeFamily;
+        font-size: 7rem;
+        color: $krafteeFont;
+      }
+
+      &.design-lab {
+        color: white;
+        font-weight: lighter;
+        font-size: 3.5rem;
+      }
+    }
+
+    img {
+      &.elefgee {
+        width: 75%;
+      }
+
+      &.peralta {
+        width: 50%;
+      }
+
+      &.gdg {
+        width: 50%;
+      }
+    }
+
+    .projectBlockInfo {
+      width: 100%;
+      height: 100%;
+      top: auto;
+    	bottom: 0;
+    	padding: 0.5rem 1rem;
+      opacity: 0;
+    	background: rgba(0,0,0,0.85);
+    	color: $wt;
+      cursor: default;
+    	@include transition;
+
+      .projectBlockTitle {
+        border-bottom: 2px solid $wt;
+        @include flexbox(row, space-between, center);
+
+        h2 {
+          font-weight: bold;
+          font-size: 2rem;
+          letter-spacing: 0.04rem;
+          @include flexbox(row, center, center);
+
+          span {
+            margin-left: 0.6rem;
+            font-weight: 300;
+            font-size: 1.5rem;
+          }
+        }
+
+        .projectBlockLinks {
+
+          a {
+            display: inline-block;
+            color: $wt;
+            padding: 5px 10px;
+            border: 2px solid $wt;
+            border-radius: 50%;
+            @include transition;
+
+            &:hover {
+              background-color: white;
+              border-color: white;
+              color: $c1;
+            }
+          }
+        }
+      }
+
+      .projectBlockDescription {
+        font-size: 1.1rem;
+        font-weight: lighter;
+
+        .danger {
+          font-size: 0.8rem;
+          background: $c1;
+          padding: 10px;
+          color: white;
+        }
+      }
+
+      .projectBlockTechnologies {
+        @include flexbox(row, flex-start, center);
+
+        .projectBlockTechnology {
+          padding: 5px;
+          margin-right: 10px;
+          font-family: $sans;
+          font-size: 0.75rem;
+          border: 1px solid $wt;
+          color: $wt;
+          @include transition;
+
+          &:hover {
+            border-color: white;
+            background-color: white;
+            color: $c1;
+          }
+        }
+      }
+    }
+  }
+}

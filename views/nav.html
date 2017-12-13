@@ -1,0 +1,88 @@
+<nav ng-style="{opacity: navOpacity}" ng-controller="NavController" set-class-when-at-top="fixToTop">
+  <div class="navWrapper">
+    <div class="navLeft">
+      <div>
+        <span>Clayton Kinder</span>
+        <span>CK</span>
+        <span class="mobileDropdownToggle" ng-click="dropdownOpen = !dropdownOpen">
+          <i class="fa fa-ellipsis-v" ng-class="{dropdownActive: dropdownOpen}"></i>
+        </span>
+        <div class="mobileDropdown" ng-class="{dropdownActive: dropdownOpen}">
+          <div class="mobileDropdownWrapper">
+            <div class="mobileSocial">
+              <a href="https://github.com/ClaytonKinder" target="_blank">
+                <i class="fa fa-github" title="Github"></i>
+              </a>
+              <a href="https://www.linkedin.com/pub/clayton-kinder/103/509/10a" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+            <div class="mobileContact">
+              <div>
+                <i class="fa fa-phone" title="Phone"></i>
+              </div>
+              <div>
+                <a href="tel:8433247727">
+                  (843) 324-7727
+                </a>
+              </div>
+            </div>
+            <div class="mobileContact">
+              <div>
+                <i class="fa fa-envelope-o" title="Email"></i>
+              </div>
+              <div>
+                <a href="email:ClaytonAlanKinder@gmail.com">
+                  ClaytonAlanKinder@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="mobileContact">
+              <div>
+                <i class="fa fa-file-text-o"></i>
+              </div>
+              <div>
+                <a href="media/ClaytonKinderResume.pdf" target="_blank">
+                  Resumé (pdf)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="https://github.com/ClaytonKinder">
+          <i class="fa fa-github" title="Github"></i>
+          <div>
+            https://github.com/ClaytonKinder
+          </div>
+        </a>
+        <a href="tel:843-324-7727">
+          <i class="fa fa-phone" title="Phone"></i>
+          <div>
+            (843) 324-7727
+          </div>
+        </a>
+        <a href="mailto:ClaytonAlanKinder@gmail.com">
+          <i class="fa fa-envelope-o" title="Email"></i>
+          <div>
+            ClaytonAlanKinder@gmail.com
+          </div>
+        </a>
+        <a href="media/ClaytonKinderResume.pdf" target="_blank">
+          <i class="fa fa-file-text-o"></i>
+          <div>
+            Resumé (pdf)
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="navRight">
+      <div>
+        <a href="#/profile" ng-class="{active: $route.current.activePage == 'profile'}" ng-click="clickedNavLink()">PROFILE</a>
+        <a href="#/projects" ng-class="{active: $route.current.activePage == 'projects'}" ng-click="clickedNavLink()">PROJECTS</a>
+        <a href="#/contact" ng-class="{active: $route.current.activePage == 'contact'}" ng-click="clickedNavLink()">CONTACT</a>
+      </div>
+    </div>
+  </div>
+</nav>

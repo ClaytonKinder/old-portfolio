@@ -1,0 +1,262 @@
+/**************************
+PROJECTS
+**************************/
+
+.test {
+  display: block;
+  height: 200px;
+  width: 200px;
+  background: red;
+}
+
+.contact {
+  .contactInfo {
+    height: 64px;
+    margin-bottom: 50px;
+    @include flexbox(row, space-between, center);
+
+    .contactSocial {
+      @include flexbox(row, space-around, center);
+
+      > a {
+        margin-left: 10px;
+        border-radius: 50%;
+        padding: 0.25rem 0.65rem;
+        font-size: 1.5rem;
+        border: 2px solid $c2;
+        color: $c2;
+        @include transition;
+
+        &:hover {
+          color: white;
+          background-color: $c1;
+          border-color: $c1;
+        }
+      }
+    }
+
+    .contactDetails {
+      height: 100%;
+      @include flexbox(column, center, flex-start);
+
+      a {
+        padding: 2.5px;
+        font-size: 0.8rem;
+        color: $c2;
+        font-family: $sans;
+        border-bottom: 2px solid white;
+        @include transition;
+
+        &:hover {
+          color: $c1;
+          border-color: $c1;
+        }
+      }
+    }
+  }
+
+  .contactFormBlock {
+    form {
+      @include flexbox(row, center, center);
+
+      .formInfo {
+        width: 50%;
+        font-size: 1.25rem;
+        color: $ddt;
+      }
+
+      .formInputs {
+        min-height: 200px;
+        width: 50%;
+        @include flexbox(column, space-around, flex-end);
+
+        > div {
+          height: 65px;
+          position: relative;
+          height: 40%;
+          width: 80%;
+
+          > label {
+            background-color: white;
+            color: $c2;
+            position: absolute;
+            left: 10px;
+            top: -17px;
+            @include transition;
+          }
+
+          > input {
+            width: 100%;
+            height: 100%;
+            padding: 10px 5px;
+            border: 4px solid $c2;
+            text-align: center;
+            @include transition;
+
+            &:focus {
+              outline: 0;
+              border-color: $c1;
+
+              &+ label {
+                color: $c1;
+              }
+
+              &~ .formAlert {
+                color: $c1;
+              }
+            }
+          }
+
+          > .formAlert {
+              position: absolute;
+              right: 10px;
+              top: -18px;
+              font-size: 1.25rem;
+              background-color: white;
+              width: 1.27rem;
+              text-align: center;
+              color: $c2;
+              @include transition;
+          }
+        }
+      }
+
+      .formTextarea {
+        padding: 50px 0 0;
+        width: 100%;
+
+        > div {
+          position: relative;
+          height: 300px;
+          background-color: pink;
+
+          > label {
+            background-color: white;
+            color: $c2;
+            position: absolute;
+            left: 10px;
+            top: -15px;
+            @include transition;
+          }
+
+          > textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 2.5%;
+            border: 4px solid $c2;
+            @include transition;
+
+            &:focus {
+              border-color: $c1;
+              outline: 0;
+
+              &+ label {
+                color: $c1;
+              }
+
+              &~ .formAlert {
+                color: $c1;
+              }
+            }
+          }
+
+          > .formAlert {
+              position: absolute;
+              right: 10px;
+              top: -18px;
+              font-size: 1.25rem;
+              background-color: white;
+              width: 1.27rem;
+              text-align: center;
+              color: $c2;
+              @include transition;
+          }
+        }
+      }
+
+      .formSubmit {
+        margin: 25px 0 100px;
+        width: 100%;
+        text-align: center;
+
+        > button {
+          width: 100%;
+          height: 75px;
+          text-align: center;
+          padding: 0px;
+          margin: 0px auto;
+          background-color: $c2;
+          border: 0;
+          font-family: $sans;
+          color: white;
+          font-size: 2rem;
+          @include transition;
+          @include flexbox(row, center, center);
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            background-color: $c1;
+          }
+
+          > span {
+            width: 100%;
+          }
+
+          .loader {
+            display: none;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 4px solid #Fff;
+            top: 50%;
+            -webkit-animation: loader 2s infinite ease;
+                    animation: loader 2s infinite ease;
+          }
+
+          .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            -webkit-animation: loader-inner 2s infinite ease-in;
+                    animation: loader-inner 2s infinite ease-in;
+          }
+
+          i {
+            display: none;
+          }
+        }
+
+        > button.disabled {
+          background-color: $dt;
+          color: $wt;
+
+          &:hover {
+            background-color: $dt;
+          }
+        }
+
+        > button.success {
+          background-color: $success;
+          pointer-events: none;
+        }
+
+        > button.failure {
+          background-color: $failure;
+          pointer-events: none;
+        }
+
+        .formSubmitMessage {
+          padding-top: 10px;
+          text-align: center;
+          font-family: $sans;
+          color: $ddt;
+        }
+      }
+    }
+  }
+}
